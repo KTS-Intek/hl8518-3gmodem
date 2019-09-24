@@ -1,0 +1,150 @@
+% 2G/3G Modem                                   Revised: Tuesday, February 09, 2016
+% C:\USERS\WIN7\DESKTOP\ORCAD91_SCHEMS\SIERRAWIRRevision: 1
+% 
+% 
+% 
+% 
+% 
+BOARD = ORCAD.PCB;
+
+PARTS
+0805 (2012 Metric) = C1;   % 22pF
+0603            = C10,   % 22pF
+                  C11,   % 22pF
+                  C12;   % 22pF
+0805 (2012 Metric) = C13;   % 22pF
+0603            = C14,   % 100nF
+                  C15,   % 100nF
+                  C16,   % 100nF
+                  C17;   % 100nF
+2917 (7343 Metric) = C18;   % 220µF
+0603            = C19;   % 100nF
+0805 (2012 Metric) = C2;   % 22pF
+0603            = C20,   % 33pF
+                  C21,   % 33pF
+                  C22,   % 1pF
+                  C23,   % 1pF
+                  C24,   % 1pF
+                  C25,   % 1pF
+                  C26,   % 100nF
+                  C27,   % 22pF
+                  C3,   % 22pF
+                  C4,   % 22pF
+                  C5;   % 22pF
+0805 (2012 Metric) = C6;   % 22pF
+0603            = C7,   % 22pF
+                  C8,   % 100nF
+                  C9;   % 100nF
+PLS2.5-6        = J1;   % PLS2.5-6
+PBS2.5-1        = J10,   % PBS2.5-1
+                  J11;   % PBS2.5-1
+PLS2.5-5        = J2;   % PLS2.5-5
+PBS2.5-2        = J3;   % PBS2.5-2
+PLS2.5-15       = J4,   % PLS2.5-15
+                  J5;   % PLS2.5-15
+PBS2.5-2        = J6;   % PBS2.5-2
+LLC 0734120110  = J7,   % LLC 0734120110
+                  J8;   % LLC 0734120110
+PBS2.5-1        = J9;   % PBS2.5-1
+0603 (1610 metric) = L1;   % 47nH
+0603            = R1,   % 0
+                  R10,   % 15k
+                  R11,   % 100k
+                  R12,   % 5.6k
+                  R13,   % 33k
+                  R2,   % 10k
+                  R3,   % 100
+                  R4,   % 100
+                  R5,   % 470
+                  R6,   % 470
+                  R7,   % 0
+                  R8,   % 0
+                  R9;   % 15k
+HL8548          = U1;   % HL8548
+SOT-363         = U2;   % MUN5214DW1T1G
+SOT-666         = VD1,   % ESDALC6V1-5P6
+                  VD2;   % ESDALC6V1-5P6
+0603            = VD3,   % LTST-C190GKT
+                  VD4,   %  LTST-C190YKT
+                  VD5,   % 0603ESDA-MLP7
+                  VD6;   % 0603ESDA-MLP7
+Molex 0473080001 = XS1;   % Molex 0473080001
+
+NETS
+
+USB_D-  = U1/12 J1/1 ;
+USB_D+  = U1/13 J1/2 ;
+USB_VBUS  = U1/16 J1/6 ;
+RESET_INN  = J5/1 R3/1 J3/2 VD2/4 ;
+UART1_DCD  = U1/08 J2/3 C6/6 ;
+UART1_CTS  = U1/04 J5/4 C13/6 ;
+PWR_ON_N  = R4/2 C17/1 U1/59 ;
+VGPIO  = R2/2 U2/5 U1/45 J4/11
+            R10/2 C26/1 C1/4 ;
+UART1_TX  = U1/05 J5/3 C13/5 ;
+UART1_DTR  = C6/7 J2/2 R1/1 U1/07 ;
+2G_TX_ON  = J5/10 U2/2 U1/60 C7/1 ;
+DEBUG_TX  = U1/44 J4/14 C2/5 ;
+UART1_RI  = U1/02 J2/1 C13/8 ;
+UART1_DSR  = R1/2 C6/5 J2/4 U1/09 ;
+UART1_RTS  = U1/03 J5/5 C13/7 ;
+DEBUG_RX  = U1/51 J4/15 C1/1 ;
+TP1  = U1/47 C1/2 J9/1 ;
+RESET_IN_N  = U1/11 R3/2 C15/1 ;
+ADC0  = U1/25 R13/1 R11/1 ;
+UART1_RX  = U1/06 J5/2 C6/8 ;
+N1997332  = VD3/2 U2/6 ;
+N1996970  = VD4/2 U2/3 ;
+I2C_SDA  = U1/66 J5/8 ;
+I2C_CLK  = U1/01 J5/7 ;
+PWM2  = U1/58 J4/4 ;
+PWM1  = U1/57 J4/5 ;
+ADC1  = U1/24 J4/1 ;
+GPIO6  = U1/46 R12/1 R9/1 C1/3 ;
+GPIO7  = U1/40 J4/8 C2/8 ;
+GPIO8  = U1/41 J4/9 C2/7 ;
+UIM1_VCC  = J10/1 U1/26 VD1/6 C10/2
+            XS1/1 C9/2 C8/2 ;
+UIM1_CLK  = XS1/3 C3/1 VD1/5 U1/27 ;
+UIM1_DATA  = U1/28 VD1/1 XS1/7 C11/2 ;
+UIM1_RESET  = VD1/4 XS1/2 C4/1 U1/29 ;
+GND  = C26/2 VD5/1 R13/2 C12/2
+            C14/2 C5/2 C7/2 J7/2
+            C1/5 C1/6 R12/2 C18/-
+            C19/2 C1/7 C6/3 C6/1
+            C6/2 C6/4 C2/1 C2/2
+            C2/3 C2/4 VD2/2 C15/2
+            J3/1 C27/1 C23/2 C22/2
+            C13/1 C13/2 C13/3 C13/4
+            VD2/5 C25/2 C24/2 J6/1
+            C17/2 U2/1 U2/4 C4/2
+            C3/2 C1/8 XS1/12 C11/1
+            XS1/5 C10/1 C8/1 C9/1
+            XS1/10 XS1/9 XS1/11 J8/2
+            VD6/1 J4/13 J2/5 U1/37
+            J4/12 U1/70 U1/170 U1/171
+            U1/167 U1/67 J4/3 U1/50
+            U1/168 U1/68 J1/3 U1/39
+            U1/169 U1/69 U1/48 C16/2
+            J4/2 J4/6 J5/6 J5/9
+            VD1/2 ;
+N1954075  = C25/1 C21/2 R8/2 ;
+VCC_3V8  = J5/12 J5/13 J5/15 C18/+
+            C19/1 J5/14 C14/1 U1/61
+            U1/62 U1/63 C16/1 R5/1
+            R6/1 ;
+N1944585  = U1/49 C24/1 R8/1 ;
+PPS  = U1/42 J4/10 C2/6 ;
+N1960296  = L1/1 C27/2 R9/2 R11/2
+            R10/1 ;
+N1954069  = C21/1 J8/1 VD6/2 L1/2 ;
+RF_GPS  = U1/38 C22/1 R7/1 ;
+N1963918  = C23/1 R7/2 C20/2 ;
+N1964224  = R6/2 VD4/1 ;
+N1964560  = R5/2 VD3/1 ;
+GPIO3  = R2/1 C12/1 U1/64 J11/1 ;
+HSIC_STRB  = U1/15 J1/5 ;
+HSIC_DATA  = U1/14 J1/4 ;
+PWR_ONN  = R4/1 VD2/1 J6/2 J5/11 ;
+N2025234  = C20/1 VD5/2 J7/1 ;
+BAT_RTC  = C5/1 U1/21 J4/7 ;

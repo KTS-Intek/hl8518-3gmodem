@@ -1,0 +1,37 @@
+2G/3G Modem  Revised: Thursday, September 22, 2016					
+          Revision: 1					
+					
+					
+					
+					
+					
+					
+					
+Bill Of Materials      September 23,2016      16:02:45	Page1				
+					
+Item	Sp	Reference	Value	Quantity	Type
+______________________________________________					
+					
+1	Capasitor array	C1,C2,C6,C13	22pF	4	CKCL44C0G1H220K085AA  0805 (2012 Metric)
+2	Capasitor	C3,C4,C5,C7,C10,C11,C12,C27	22pF	8	0603 Ceramic X5R
+3	Capasitor	C8,C9,C14,C15,C16,C17,C19,C26	100nF	8	0603 Ceramic X5R
+4	Capasitor	C18	220µF	1	TAJD227K006RNJ 2917 (7343 Metric)
+5	Capasitor	C20,C21	33pF	2	0603 Ceramic X5R
+6	Capasitor	C22,C23,C24,C25	1pF	4	0603 Ceramic X5R
+7	Header	J1,J2,J4,J5		1	PLS2.5-40 through hole (розділити на 15, 13, 6 і 5)
+12	RF Connector	J8,J7		2	LLC 0734120110 SMD UFL Male
+14	Inductor 	L1	47nH	1	L-14W47NGV4E 0603 (1610 metric)
+15	Resistor	R1,R7,R8	0	3	0603 ±0%
+17	Resistor	R3,R4	120	2	0603 ±5%
+18	Resistor	R5,R6	470	2	0603 ±5%
+19	Resistor	R9,R10,R2	15k	3	0603 ±1%
+20	Resistor	R11	100k	1	0603 ±1%
+21	Resistor	R12	5.6k	1	0603 ±1%
+22	Resistor	R13	33k	1	0603 ±1%
+23	2G/3G module	U1		1	HL8548/HL8518
+24	Dual NPN bias resistor transistors	U2		1	MUN5214DW1T1G SOT-363
+25	TVS diode array	VD2,VD1		2	ESDALC6V1-5P6 SOT-666
+26	LED	VD3		1	LTST-C190GKT 0603 (1608 Metric)
+27	LED	VD4		1	LTST-C190YKT 0603 (1608 Metric)
+28	TVS diode	VD6,VD5		2	0603ESDA-MLP7 0603 (1608 Metric)
+29	SIM Connector	XS1		1	Molex 0473080001 Connector
